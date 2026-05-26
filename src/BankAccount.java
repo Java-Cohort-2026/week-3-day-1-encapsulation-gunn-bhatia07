@@ -22,7 +22,7 @@ public class BankAccount {
     // Otherwise, print "Error: Invalid deposit amount"
     public void deposit(double amount) {
         if (amount>0) {
-            balance += amount;
+            balance = balance + amount;
         } else {
             System.out.println("Invalid deposit amount");
         }
@@ -33,7 +33,7 @@ public class BankAccount {
     // Otherwise, print "Error: Insufficient funds or invalid amount"
     public void withdraw(double amount) {
         if (amount>0 && amount<= balance) {
-            balance -= amount;
+            balance = balance - amount;
         } else {
             System.out.println("Invalid amount");
         }
